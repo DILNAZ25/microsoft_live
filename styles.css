@@ -8,20 +8,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 82vh;
+    min-height: 87vh;
     height:0px;
     background: linear-gradient(to right, #F0D8D8, #D3E5C3);
     
 }
 .wrapper {
     display: block;
-    width: 470px;
+    width: 448px;
     background: white;
     padding: 43px; 
     border-radius:0;
     box-shadow: 0px 5px 14px 3px rgba(34, 60, 80, 0.08);
-    height: 355px;
+    height: 340px;
     position: relative;
+
 }
 
 .wrapper i{
@@ -88,43 +89,112 @@ button:hover {
   }
 
 
-  .sign-in-container {
+
+.sign-in-container {
     position: absolute;
-    width: max-content; 
+    width: max-content ;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 29%;
+
 }
-.sign-in-container button{
-    padding: 14px 299px 14px 45px;
+
+.sign-in-container button {
+    padding: 14px 277px 14px 45px;
     font-size: 16px;
     background: white;
     border: none;
     box-shadow: 0px 5px 14px 3px rgba(34, 60, 80, 0.08);
     cursor: pointer;
-    font-weight:100;
+    font-weight: 100;
 }
-.hidden{
+
+
+
+
+.overlay {
+
+    width: 448px;
+    background: white;
+    padding: 43px; 
+    border-radius:0;
+    box-shadow: 0px 5px 14px 3px rgba(34, 60, 80, 0.08);
+    height: 465px;
+    margin-top: 80px;
+}
+.overlay h3 {
+    color: grey;
+    font-size: 20px;
+    padding-top:3px;
+    margin-left:33px;
+    font-weight: 500;
+
+}
+.overlay i{
+    position:absolute ;
+    font-size: 30px;
+    padding-right:30px;
+
+}
+.overlay h4{
+    font-size:24px;
+    margin-top: 20px;
+    font-weight: 550;
+
+}
+.overlay .btn {
+    position: relative;
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-start;
+    gap: 10px; 
+    width: 100%;
+    padding: 12px;
+    margin-top: 25px;
+    font-size: 16px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+
+.overlay .back-btn{
+    margin-left: auto;
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Анимация */
+.hidden {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateY(-20px);
     pointer-events: none;
     position: absolute;
-    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .show {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
     pointer-events: auto;
 }
 
+
 .back-btn {
-    color: black;
     background: grey;
+    color:black;
+    border: none;
+    padding: 5px;
     cursor: pointer;
-    padding: 10px;
-    text-align: left;
+    width: 30%;
+    height:32px;
+    
+    margin-bottom: 10px;
+    
 }
+
 
   .ghj {
 display: flex;
