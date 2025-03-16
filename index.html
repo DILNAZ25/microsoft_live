@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 
 </head>
 <body>
@@ -19,24 +20,54 @@
                     <h2>Sign in</h2>
                
                 <div class="input-box">
-                    <input type="text" placeholder="Email, phone, or Skype" required>
+                    <input type="text" id="loginInput" placeholder="Email, phone, or Skype" required>
                 </div>
     
                 <div class="register-link">
                     <p>No account? <a href="#">Create one!</a></p>
                 </div>
+
+
             
-                <button type="submit" class="btn">Next</button>
-            
+                <button id="next" type="submit" class="btn">Next</button>
+
+                
             
         
             </form>
         </div>
+  
 
+        <div class="overlaypassword" id="overlaypassword">
+            <div class="hiddenpassword" id="password">
+        <i class='bx bxs-customize' ></i>
+        <h5>Microsoft</h5>
+
+<div class="back-container">
+        <div><button class="backtologin" id="backtologin"><i class='bx bx-left-arrow-alt'></i></button> 
+            <span class="displaylogin" id="displayLogin"></span> 
+            </div>
+</div>
+            
+        <h6>Enter password</h6>
+        <div class="input-box-password">
+            <input type="text" placeholder="Password" required >
+        </div>
+
+        <div class="register-link-password">
+            <a href="#">Forgot my password</a>
+        </div>
+        <button type="submit" class="btnpass">Sign in</button>
+    </div>
+        </div>
+
+
+        
 
         <div class="sign-in-container">
             <button id="show-sign"><i class='bx bxs-key'></i> Sign-in options</button>
         </div>
+
     <div class ="overlay" id="overlay">
         <div class="hidden" id="options">
             
@@ -44,21 +75,42 @@
             <h3>Microsoft</h3>
 
             <h4>Sign-in options</h4>
-            <div><button class="btn" ><i class='bx bxs-user' ></i> 
-            Face, fingerprint, PIN or security key
-            </button></div>
-            <div><button class="btn"><i class='bx bxl-github'></i> 
-            Sign in with GitHub
-            </button></div>
-            <div><button class="btn"><i class='bx bx-question-mark' ></i> 
-            Forgot my username
-            </button></div>
+        
+            <button class="btn1" type="button">
+                <span class="material-symbols-outlined" style="font-size: 35px;">
+                    passkey
+                    </span>
+            <span>Face, fingerprint, PIN or security key</span>
+            
+            </button>
+    
+
+            <button class="btn2" type="button">
+                <span class="material-symbols-outlined" style="font-size: 35px;">
+                    person
+                    </span>
+
+                <span>Sign in with GitHub</span>
+            </button>
+
+    
+
+            <button class="btn3" type="button">
+            <span class="material-symbols-outlined" style="font-size: 35px;">
+                question_mark
+                </span>
+                <span>Forgot my username</span>
+            </button>
+
+        
             <div><button class="back-btn" id="back">
             Back
             </button></div>
         
         </div>
         </div>
+
+
     <div id="gh" class="ghj">
         <ul>
             <li><a href="#">Terms of use</a></li>
@@ -70,3 +122,459 @@
         </div>
 </body>
  </html>
+
+
+ <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 87vh;
+    height:0px;
+    background: linear-gradient(to right, #F0D8D8, #D3E5C3);
+    
+}
+.wrapper {
+    display: block;
+    width: 448px;
+    background: white;
+    padding: 43px; 
+    border-radius:0;
+    box-shadow: 0px 5px 14px 3px rgba(34, 60, 80, 0.08);
+    height: 340px;
+    position: relative;
+
+}
+
+.wrapper i{
+    position:absolute ;
+    font-size: 30px;
+    padding-right:30px;
+
+}
+.wrapper h1 {
+    color: grey;
+    font-size: 20px;
+    padding-top:3px;
+    margin-left:33px;
+    font-weight: 500;
+
+}
+
+.wrapper h2{
+    font-size:24px;
+    margin-top: 20px;
+    font-weight: 550;
+}
+.wrapper .input-box{
+    width: 100%;
+    margin:20px 0;
+}
+.input-box input{
+    width: 100%;
+    height:100%;
+    border:none;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size:16px;
+    padding: 8px 0;
+
+}
+
+.wrapper .register-link{
+    font-size: 13px;
+    padding: 0 2px 0 2px;
+}
+.register-link p a{
+    text-decoration: none;
+}
+.register-link p a:hover{
+    text-decoration: underline;
+    color: grey;
+}
+.wrapper .btn {
+    width: 30%; 
+    height: 32px;
+    background: #0056b3;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    margin-top: 68px; 
+    margin-left:255px; 
+}
+button:hover {
+    filter: brightness(90%); 
+  }
+
+
+
+
+
+
+  .overlaypassword{
+    width: 448px;
+    background: white;
+    padding: 43px; 
+    border-radius:0;
+    box-shadow: 0px 5px 14px 3px rgba(34, 60, 80, 0.08);
+    height: 320px;
+    margin-top: 50px;  
+}
+
+
+.overlaypassword i{
+    position:absolute ;
+    font-size: 30px;
+    padding-right:30px;
+
+}
+.overlaypassword h5 {
+    color: grey;
+    font-size: 20px;
+    padding-top:3px;
+    margin-left:33px;
+    font-weight: 500;
+
+}
+.back-container{
+    margin-top: 15px;
+}
+.backtologin i{
+    font-size:18px;
+    
+    position: relative;
+}
+.backtologin{
+    color:grey;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    
+}
+.displaylogin
+{
+    position:absolute;
+    margin-left: 4px;
+    font-size: 15px;
+    font-weight: lighter;
+    color: black;
+    
+    
+}
+
+
+.overlaypassword h6 {
+    font-size: 23px;
+    font-weight:550;
+    margin-top: 13px;
+}
+
+.input-box-password{
+    width: 100%;
+    margin:13px 0;
+}
+.input-box-password input{
+    width: 100%;
+    height:100%;
+    border:none;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size:14px;
+    padding: 8px 0;
+
+}
+.register-link-password{
+    font-size: 13px;
+    padding: 0 2px 0 2px;
+    
+}
+.register-link-password a{
+    text-decoration: none;
+    
+}
+.register-link-password a:hover{
+    text-decoration: underline;
+    color: grey;
+}
+.btnpass {
+    width: 30%; 
+    height: 32px;
+    background: #0056b3;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    margin-top: 23px; 
+    margin-left:255px; 
+}
+
+
+
+
+
+
+.sign-in-container {
+    position: absolute;
+    width: max-content ;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 29%;
+
+}
+
+.sign-in-container button {
+    padding: 14px 277px 14px 45px;
+    font-size: 16px;
+    background: white;
+    border: none;
+    box-shadow: 0px 5px 14px 3px rgba(34, 60, 80, 0.08);
+    cursor: pointer;
+    font-weight: 100;
+}
+
+
+
+
+.overlay {
+
+    width: 448px;
+    background: white;
+    padding: 43px; 
+    border-radius:0;
+    box-shadow: 0px 5px 14px 3px rgba(34, 60, 80, 0.08);
+    height: 465px;
+    margin-top: 80px;
+}
+.overlay h3 {
+    color: grey;
+    font-size: 20px;
+    padding-top:3px;
+    margin-left:33px;
+    font-weight: 500;
+
+}
+.overlay i{
+    position:absolute ;
+    font-size: 30px;
+    padding-right:30px;
+
+}
+.overlay h4{
+    font-size:24px;
+    margin-top: 20px;
+    font-weight: 550;
+
+}
+
+.btn1{
+display:inline-flex;
+align-items:center;
+font-size: 16px;
+margin-top:20px;
+gap:10px;
+background-color:  white;
+border:none;
+padding: 15px 58px 15px 0px ;
+}
+.btn2{
+display: inline-flex;
+align-items: center;
+font-size: 16px;
+margin-top:12px;
+gap:10px;
+background-color:  white;
+border:none;
+max-width: 1000px;
+padding: 15px 180px 15px 0px ;
+}
+.btn3{
+display: inline-flex;
+align-items: center;
+font-size: 16px;
+margin-top:12px;
+gap:10px;
+background-color:  white;
+border:none;
+max-width: 1000;
+padding: 15px 168px 15px 0px ;
+}
+
+.overlay .back-btn{
+    margin-left: auto;
+    display: block;
+    text-align: center;
+    margin-top: 35px;
+    background-color: #C0C0C0;
+}
+
+
+.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    position: absolute;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
+.back-btn {
+    background: grey;
+    color:black;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    width: 30%;
+    height:32px;
+    
+    margin-bottom: 10px;
+    
+}
+
+
+  .ghj {
+display: flex;
+position: absolute;
+flex-direction: column; 
+align-items: flex-end;  
+padding: 5px 15px;
+right:2px;
+bottom:3px;
+font-size: 10px;
+}
+
+.ghj ul {
+    display: flex;     
+    gap: 15px;         
+    list-style: none;    
+    padding: 0;
+    margin: 0;
+    font-size: 0px;
+
+}
+
+.ghj ul li a {
+    text-decoration: none;
+    color: #0056b3;
+    font-size: 11px;
+    color: black;
+    font-weight: 100;
+}
+
+.ghj ul li a:hover {
+    text-decoration: underline;
+}
+
+.ghj .text {
+    font-size: 11px;
+    color: black;
+    text-align: right;
+    text-decoration: none;
+    font-size: 12px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 5px;
+    font-family: "Calibri";
+    font-weight: 100;
+}
+
+.ghj .text a {
+    text-decoration: none;
+    color: blue;
+    font-family:"Calibri";
+}
+.ghj .text a:hover {
+    text-decoration: underline;
+    color:grey;
+}
+
+
+ </style>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => { 
+    const signInOptions = document.getElementById("show-sign");
+    const passwordplace = document.getElementById("next");
+    const backtologin = document.getElementById("backtologin");
+    const overlaypassword = document.getElementById("overlaypassword");
+    const passwordblock = document.getElementById("password"); 
+    const logininput = document.getElementById("loginInput");
+
+    const back = document.getElementById("back");
+    const wrapper = document.getElementById("wrapper");
+    const options = document.getElementById("options");
+    const overlay = document.getElementById("overlay");
+
+    overlay.classList.add("hidden");
+    overlaypassword.classList.add("hidden");
+
+
+    passwordplace.addEventListener("click", (event) => {
+        event.preventDefault();
+        let loginValue = loginInput.value.trim();
+        if (loginValue === "") {
+            alert("Enter a valid email address, phone number, or Skype name.");
+            return; 
+        }
+        document.getElementById("displayLogin").textContent = logininput.value; 
+        wrapper.classList.add("hidden");
+        signInOptions.classList.add("hidden");
+        passwordblock.classList.remove("hidden");
+        passwordblock.classList.add("show");
+        overlaypassword.classList.remove("hidden");
+        overlaypassword.classList.add("show");
+    });
+
+
+    backtologin.addEventListener("click", (event) => {
+        event.preventDefault();
+        
+        passwordblock.classList.add("hidden");
+        passwordblock.classList.remove("show");
+        wrapper.classList.remove("hidden");
+        signInOptions.classList.remove("hidden");
+        overlaypassword.classList.add("hidden");
+        overlaypassword.classList.remove("show");
+    });
+
+    
+    signInOptions.addEventListener("click", () => {
+        wrapper.classList.add("hidden");
+        signInOptions.classList.add("hidden");
+        options.classList.remove("hidden");
+        options.classList.add("show");
+        overlay.classList.remove("hidden");
+        overlay.classList.add("show");
+    });
+
+    back.addEventListener("click", () => {
+        options.classList.add("hidden");
+        options.classList.remove("show");
+        wrapper.classList.remove("hidden");
+        signInOptions.classList.remove("hidden");
+        overlay.classList.add("hidden");
+        overlay.classList.remove("show");
+    });
+});
+
+</script>
